@@ -1,0 +1,12 @@
+.trail {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  position: relative;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 950px) {
+    height: 1638px;
+  }
+}

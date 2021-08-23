@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="27px" viewBox="0 0 69 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>emblem</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(0.000000, -40.000000)" fill-rule="nonzero">
+            <g id="emblem" transform="translate(0.000000, 40.000000)">
+                <path d="M25.8615,18.0342 L25.7165,18.1792 L25.8615,18.0342 Z" id="Path" fill="#006AB2"></path>
+                <polygon id="Path" fill="#006AB2" points="25.8624 18.0342 34.4374 9.4592 34.4374 9.4582 34.4484 9.4472 25.7174 0.7152 17.1304 9.3022 25.8614 18.0342"></polygon>
+                <polygon id="Path" fill="#F19400" points="34.4377 9.4595 25.8627 18.0345 34.0547 26.2275 35.1337 26.2275 43.1697 18.1915"></polygon>
+                <polygon id="Path" fill="#006AB2" points="34.4377 9.4595 43.1697 18.1915 51.9017 9.4585 51.9017 9.4595 51.9027 9.4585 43.1697 0.7265 34.4487 9.4475 34.4377 9.4585"></polygon>
+                <polygon id="Path" fill="#F19400" points="43.1701 18.1914 51.2061 26.2274 52.5981 26.2274 60.6341 18.1914 51.9011 9.4594 51.9011 9.4584"></polygon>
+                <polygon id="Path" fill="#F9BE5C" points="68.6711 26.227 60.6341 18.191 52.5981 26.227"></polygon>
+                <polygon id="Path" fill="#F9BE5C" points="25.8615 18.0342 25.7165 18.1792 17.6695 26.2272 34.0545 26.2272 25.8625 18.0342"></polygon>
+                <polygon id="Path" fill="#0B71B4" points="16.882 26.227 17.669 26.227 25.717 18.179 25.861 18.034 17.13 9.302 8.398 18.034 8.543 17.889"></polygon>
+                <polygon id="Path" fill="#006AB2" points="16.882 26.227 8.543 17.889 8.398 18.034 0.205 26.227"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

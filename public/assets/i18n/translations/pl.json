@@ -1,0 +1,77 @@
+{
+  "navigation": {
+    "name": "SZLAK STYLU ZAKOPIAŃSKIEGO",
+    "first": "MAPA SZLAKU",
+    "second": "OBIEKTY",
+    "third": "WYDARZENIA",
+    "fourth": "ROZKŁADY",
+    "fifth": "POGODA",
+    "sixth": "O SZLAKU"
+  },
+
+  "button": {
+    "object": {
+      "all": "Wszystkie",
+      "house": "Wille i domy",
+      "sacred": "Sakralne",
+      "museum": "Muzea i galerie",
+      "other": "Pozostałe"
+    },
+    "event": {
+      "all": "Wszystkie",
+      "culture": "Kultura",
+      "sport": "Sport",
+      "festivals": "Festiwale",
+      "kids": "Dla dzieci",
+      "tickets": "Biletowanie",
+      "outdoor": "Plenerowe",
+      "others": "Pozostałe"
+    },
+    "openNow": "Otwarte teraz"
+  },
+
+  "cardDetails": {
+    "tooltip": "Wskanuj QR - Twój telefon doprowadzi Cię na miejsce!",
+    "qrPhoto": "Zrób zdjęcie kodu QR",
+    "logo": "Publikację opracowali:",
+    "weather": "Pogoda:",
+    "current": "Aktualna pogoda",
+    "forecast": "Prognoza pogody",
+    "hour": {
+      "mon": "Poniedziałek:",
+      "tue": "Wtorek:",
+      "wen": "Środa:",
+      "thu": "Czwartek:",
+      "fri": "Piątek:",
+      "sat": "Sobota:",
+      "sun": "Niedziela:",
+      "closed": "Nieczynne"
+    }
+  },
+
+  "eventDetails": {
+    "descriptionTitle": "Opis wydarzenia",
+    "descriptionSubtitle": "Informacje"
+  },
+
+  "timetable": {
+    "name": "Najbliższe połączenia",
+    "show": "Pokaż połączenia",
+    "minutes": "minut",
+    "timeTravel": "Czas podróży:",
+    "selectStation": "Wybierz przystanek"
+  },
+
+  "weatherBox": {
+    "perceivedTemperature": "Temperatura odczuwalna:",
+    "wind": "Wiatr:",
+    "humidity": "Wilgotność:",
+    "pressure": "Cieśnienie:"
+  },
+
+  "weatherChart": {
+    "forecast": "Prognoza pogody",
+    "temperature": "Temperatura prognozowana",
+    "perceivedTemperature": "Temperatura prognozowana odczuwalna"
+  }
+}

@@ -1,0 +1,60 @@
+.chart {
+  width: 1035px;
+  padding: 60px 0 40px 50px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow-x: scroll;
+
+  &__name {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 40px;
+  }
+
+  &__icon {
+    position: relative;
+    transform: translateX(40px);
+    width: 50px;
+    margin-right: 85px;
+  }
+}
+
+.chartBox {
+  min-width: 1510px;
+  margin-bottom: 50px;
+}
+
+.legendBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+  align-items: flex-start;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__line {
+    width: 55px;
+    height: 7px;
+    margin-right: 5px;
+    background-color: #323232;
+
+    &Dot {
+      @extend .legendBox__line;
+
+      width: 5px;
+    }
+  }
+
+  &__paragraph {
+    color: #323232;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+}

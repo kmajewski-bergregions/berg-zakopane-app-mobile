@@ -1,0 +1,77 @@
+{
+  "navigation": {
+    "name": "TRIAL ZAKOPANE STYLE",
+    "first": "TRIAL MAP",
+    "second": "OBJECTS",
+    "third": "EVENTS",
+    "fourth": "TIMETABLE",
+    "fifth": "WEATHER",
+    "sixth": "ABOUT TRIAL"
+  },
+
+  "button": {
+    "object": {
+      "all": "All",
+      "house": "Villas and houses",
+      "sacred": "Sacred",
+      "museum": "Museums and galleries",
+      "other": "Other"
+    },
+    "event": {
+      "all": "All",
+      "culture": "Culture",
+      "sport": "Sport",
+      "festivals": "Festivals",
+      "kids": "For kids",
+      "tickets": "Tickets",
+      "outdoor": "Outdoor",
+      "others": "Others"
+    },
+    "openNow": "Open Now"
+  },
+
+  "cardDetails": {
+    "tooltip": "Scan QR code - then follow your smart phone instructions!",
+    "qrPhoto": "Take a picture of the QR code",
+    "logo": "The publication was prepared by:",
+    "weather": "Weather:",
+    "current": "Current weather",
+    "forecast": "Weather forecast",
+    "hour": {
+      "mon": "Monday:",
+      "tue": "Tuesday:",
+      "wen": "Wednesday:",
+      "thu": "Thursday:",
+      "fri": "Friday:",
+      "sat": "Saturday:",
+      "sun": "Sunday:",
+      "closed": "Closed"
+    }
+  },
+
+  "eventDetails": {
+    "descriptionTitle": "Description of the event",
+    "descriptionSubtitle": "Information"
+  },
+
+  "weatherBox": {
+    "perceivedTemperature": "RealFeel:",
+    "wind": "Wind:",
+    "humidity": "Humidity:",
+    "pressure": "Pressure:"
+  },
+
+  "timetable": {
+    "name": "Nearby connections",
+    "show": "Show connections",
+    "minutes": "minutes",
+    "timeTravel": "Travel time:",
+    "selectStation": "Select station"
+  },
+
+  "weatherChart": {
+    "forecast": "Weather forecast",
+    "temperature": "Temperature forecast",
+    "perceivedTemperature": "Temperature forecast RealFeel"
+  }
+}
