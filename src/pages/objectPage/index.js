@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useParams } from 'react-router-dom';
 import ObjectDetails from '../../components/objectDetails/objectDetails';
 
 import styles from './index.module.scss';
 
 const ObjectPage = ({ objects, languagePl }) => {
   const [showFullCard, setShowFullCard] = useState(true);
+
+  const SingleObject = () => {
+    const { id } = useParams();
+
+    return (
+      <ObjectDetails
+        languagePl={languagePl}
+        object={objects.find((object) => object.id === Number(id))}
+        showFullCard={showFullCard}
+        setShowFullCard={setShowFullCard}
+      />
+    );
+  };
 
   return (
     <Switch>
@@ -16,12 +29,7 @@ const ObjectPage = ({ objects, languagePl }) => {
         </div>
       </Route>
       <Route exact path="/object/:id">
-        <ObjectDetails
-          languagePl={languagePl}
-          objects={objects}
-          showFullCard={showFullCard}
-          setShowFullCard={setShowFullCard}
-        />
+        <SingleObject />
       </Route>
     </Switch>
   );
