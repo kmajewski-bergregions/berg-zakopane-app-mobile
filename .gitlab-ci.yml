@@ -1,0 +1,9 @@
+image: ninjamajewski/node-aws-cli
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - ./build.sh $CI_COMMIT_BRANCH $CI_COMMIT_MESSAGE
