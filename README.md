@@ -1,0 +1,2 @@
+# berg-zakopane-app-mobile
+
