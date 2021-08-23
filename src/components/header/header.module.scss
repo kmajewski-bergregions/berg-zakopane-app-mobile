@@ -18,58 +18,12 @@
   justify-content: space-between;
   padding: 1.5rem;
   border-bottom: 0.5px solid #c4c4c4;
-
-  @media screen and (min-width: 950px) {
-    padding: 2rem;
-  }
-}
-
-.headerBottom {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding-top: 4rem;
-
-  @media screen and (min-width: 950px) {
-    display: flex;
-  }
-}
-
-.date {
-  display: none;
-
-  @media screen and (min-width: 950px) {
-    display: block;
-  }
-
-  &__time {
-    font-weight: $font-bold;
-    font-size: $font-size-xll;
-    line-height: $line-height-xll;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-
-  &__date {
-    font-weight: $font-regular;
-    font-size: $font-size-l;
-    line-height: $line-height-l;
-    text-align: center;
-    letter-spacing: 1px;
-  }
 }
 
 .logo {
   position: static;
   width: 15rem;
   height: 30px;
-
-  @media screen and (min-width: 950px) {
-    position: absolute;
-    left: 36%;
-    width: 30rem;
-    height: 80px;
-  }
 
   &__description {
     letter-spacing: 1px;
@@ -78,50 +32,16 @@
     color: $color-green;
     text-align: left;
     line-height: 0;
-
-    @media screen and (min-width: 950px) {
-      letter-spacing: 2px;
-      font-size: 16px;
-      text-align: center;
-    }
   }
 
   &__logo {
     width: 13rem;
-
-    @media screen and (min-width: 950px) {
-      width: 30rem;
-      height: 5rem;
-      margin-bottom: 10px;
-    }
   }
 }
 
 .weather {
   display: flex;
   align-items: center;
-
-  &__container {
-    display: none;
-    align-items: center;
-
-    @media screen and (min-width: 950px) {
-      display: flex;
-    }
-  }
-
-  &__icon {
-    width: 48px;
-    height: 46px;
-    margin-right: 0.5rem;
-  }
-
-  &__temperature {
-    font-weight: $font-bold;
-    font-size: 3rem;
-    line-height: $line-height-xll;
-    margin-right: 4.5rem;
-  }
 
   &__button {
     display: flex;
@@ -134,21 +54,11 @@
   &__flag {
     width: 3.2rem;
     height: 3.8rem;
-
-    @media screen and (min-width: 950px) {
-      width: 4.6rem;
-      height: 3.8rem;
-    }
   }
 
   &__flagEn {
     width: 3.3rem;
     height: 3.8rem;
-
-    @media screen and (min-width: 950px) {
-      width: 4.3rem;
-      height: 4.4rem;
-    }
   }
 
   &__paragraph {
@@ -156,10 +66,5 @@
     font-size: $font-size-l;
     line-height: $line-height-l;
     margin-left: 0.6rem;
-
-    @media screen and (min-width: 950px) {
-      font-size: $font-size-xl;
-      line-height: $line-height-xl;
-    }
   }
 }

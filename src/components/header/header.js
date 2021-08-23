@@ -1,45 +1,15 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import Moment from 'react-moment';
-import 'moment/locale/pl';
-import 'moment/locale/en-gb';
-import { useTranslation } from 'react-i18next';
-import { getIcon } from '../../helpers/weather';
-import styles from './header.module.scss';
-import Navigation from './components/navigation';
 
-const Header = ({
-  changeLanguage,
-  languagePl,
-  weatherData,
-  setShowMenuObjectSelect,
-  setShowMenuEventSelect,
-}) => {
+import { useTranslation } from 'react-i18next';
+
+import styles from './header.module.scss';
+
+const Header = ({ changeLanguage, languagePl }) => {
   const { t } = useTranslation();
-  const date = new Date();
 
   return (
-    <header
-      className={styles.header}
-      onClick={() => {
-        setShowMenuObjectSelect(false);
-        setShowMenuEventSelect(false);
-      }}
-    >
+    <header className={styles.header}>
       <div className={styles.headerTop}>
-        <div className={styles.date}>
-          <p className={styles.date__time}>
-            <Moment interval={1000} format="HH:mm" />
-          </p>
-          <p className={styles.date__date}>
-            {languagePl ? (
-              <Moment interval={1000} format="DD MMMM YYYY" locale="pl" />
-            ) : (
-              <Moment interval={1000} format="DD MMMM YYYY" locale="en-gb" />
-            )}
-          </p>
-        </div>
         <div className={styles.logo}>
           <img
             className={styles.logo__logo}
@@ -49,16 +19,6 @@ const Header = ({
           <p className={styles.logo__description}>{t('navigation.name')}</p>
         </div>
         <div className={styles.weather}>
-          <div className={styles.weather__container}>
-            <img
-              className={styles.weather__icon}
-              src={`${process.env.PUBLIC_URL}/assets/img/weather/dark/${
-                date.getHours() < 21 && date.getHours() > 7 ? 'day' : 'night'
-              }/${getIcon(weatherData.weatherCode)}`}
-              alt="Ikona pogody"
-            />
-            <p className={styles.weather__temperature}>{weatherData.temperatureValue}&deg;C</p>
-          </div>
           {languagePl ? (
             <>
               <button
@@ -91,9 +51,6 @@ const Header = ({
             </>
           )}
         </div>
-      </div>
-      <div className={styles.headerBottom}>
-        <Navigation languagePl={languagePl} />
       </div>
     </header>
   );

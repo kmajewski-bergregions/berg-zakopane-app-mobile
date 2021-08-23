@@ -14,10 +14,6 @@ span {
 
   &__descriptionBox {
     padding: 15px;
-
-    @media screen and (min-width: 950px) {
-      padding: 30px 60px;
-    }
   }
 
   &__imageBox {
@@ -31,11 +27,6 @@ span {
     :last-child {
       margin-right: 0px;
     }
-
-    @media screen and (min-width: 950px) {
-      min-height: 340px;
-      height: 340px;
-    }
   }
 
   &__image {
@@ -48,11 +39,6 @@ span {
     font-weight: $font-semiBold;
     font-size: 30px;
     line-height: 45px;
-
-    @media screen and (min-width: 950px) {
-      font-size: $font-size-xll;
-      line-height: $line-height-xll;
-    }
   }
 
   &__category {
@@ -91,12 +77,6 @@ span {
     border-top: 1px solid #cccccc;
     margin-top: 3rem;
     padding-top: 3rem;
-
-    @media screen and (min-width: 950px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-    }
   }
 
   &__logoBoxParagraph {
@@ -111,12 +91,6 @@ span {
     max-width: 225px;
     margin-top: 5px;
     margin-bottom: 5px;
-
-    @media screen and (min-width: 950px) {
-      flex-direction: row;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
   }
 
   &__photo {
@@ -135,15 +109,6 @@ span {
 .infoRight {
   &__box {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    margin-right: $margin-m;
-
-    @media screen and (min-width: 950px) {
-      display: flex;
-    }
   }
 
   &__paragraph {
@@ -157,12 +122,6 @@ span {
 
   &__qr {
     display: none;
-    width: 180px;
-    height: 180px;
-
-    @media screen and (min-width: 950px) {
-      display: block;
-    }
   }
 }
 
@@ -173,31 +132,17 @@ span {
   padding-bottom: $padding-l;
   border-bottom: 1px solid #cccccc;
 
-  @media screen and (min-width: 800px) {
-    flex-direction: row;
-  }
-
   &__box {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @media screen and (min-width: 800px) {
-      width: 50%;
-    }
-
     &Border {
       @extend .weather__box;
 
       border-bottom: 1px solid #cccccc;
       padding-bottom: 15px;
-
-      @media screen and (min-width: 800px) {
-        padding-bottom: 0;
-        border-bottom: none;
-        border-right: 1px solid #cccccc;
-      }
     }
   }
 
@@ -218,10 +163,6 @@ span {
     font-weight: $font-semiBold;
     font-size: 30px;
     text-align: center;
-
-    @media screen and (min-width: 800px) {
-      font-size: $font-size-xll;
-    }
   }
 }
 

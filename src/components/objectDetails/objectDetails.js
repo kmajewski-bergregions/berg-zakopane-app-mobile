@@ -11,34 +11,19 @@ import { ReactComponent as Logo } from '../../assets/berg_logo.svg';
 import styles from './objectDetails.module.scss';
 import Footer from '../footer/footer';
 
-const ObjectDetails = ({
-  languagePl,
-  objects,
-  showThisObject,
-  showFullCard,
-  setShowFullCard,
-  lat,
-  lon,
-}) => {
+const ObjectDetails = ({ languagePl, objects, showFullCard, setShowFullCard }) => {
   const { t } = useTranslation();
   const { id } = useParams();
   const date = new Date();
   const day = date.getDay();
   const [showDays, setShowDays] = useState(false);
-  const [showToolTipLocation, setShowToolTipLocation] = useState(false);
   const [weatherDataObject, setWeatherDataObject] = useState([]);
   const [weatherForecastObject, setWeatherForecastObject] = useState([]);
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  const resizeWindow = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const lat = 49.2956;
+  const lon = 19.9512;
 
   const handlerShowDays = () => {
     setShowDays(!showDays);
-  };
-  const handlerShowToolTipLocation = () => {
-    setShowToolTipLocation(!showToolTipLocation);
   };
 
   useEffect(() => {
@@ -74,7 +59,6 @@ const ObjectDetails = ({
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
           setShowDays(false);
-          setShowToolTipLocation(false);
         }
       }
       document.addEventListener('mousedown', handleClickOutside);
@@ -87,16 +71,10 @@ const ObjectDetails = ({
   const clickOutsideRef = useRef(null);
   useOutsideAlerter(clickOutsideRef);
 
-  useEffect(() => {
-    resizeWindow();
-    window.addEventListener('resize', resizeWindow);
-    return () => window.removeEventListener('resize', resizeWindow);
-  }, []);
-
   return (
     <>
       {objects
-        .filter((object) => object.id === Number(id) || object.id === showThisObject)
+        .filter((object) => object.id === Number(id))
         .flatMap((object) => (
           <div className={showFullCard ? styles.objectFull : styles.object} key={object.id}>
             <div className={showFullCard ? styles.object__imageBoxFull : styles.object__imageBox}>
@@ -283,48 +261,24 @@ const ObjectDetails = ({
                     )}
                   </div>
                   <div className={styles.infoLeft__box}>
-                    {windowWidth < 950 ? (
-                      <a
-                        className={styles.infoLeft__linkToMap}
-                        href={object.urlToMap}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <img
-                          className={styles.info__icon}
-                          src={`${process.env.PUBLIC_URL}/assets/img/icon_point.svg`}
-                          alt="Point icon"
-                        />
-                        <div>
-                          <p className={styles.infoLeft__paragraph}>
-                            <span>{object.street}</span>
-                          </p>
-                          <p className={styles.infoLeft__paragraph}>{object.city}</p>
-                        </div>
-                      </a>
-                    ) : (
-                      <>
-                        <img
-                          className={styles.info__icon}
-                          src={`${process.env.PUBLIC_URL}/assets/img/icon_point.svg`}
-                          alt="Point icon"
-                        />
-                        <div onClick={handlerShowToolTipLocation}>
-                          <p className={styles.infoLeft__paragraph}>
-                            <span>{object.street}</span>
-                          </p>
-                          <p className={styles.infoLeft__paragraph}>{object.city}</p>
-                        </div>
-                        {showToolTipLocation && (
-                          <div
-                            className={styles.info__locationBox}
-                            onClick={handlerShowToolTipLocation}
-                          >
-                            {t('cardDetails.tooltip')}
-                          </div>
-                        )}
-                      </>
-                    )}
+                    <a
+                      className={styles.infoLeft__linkToMap}
+                      href={object.urlToMap}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        className={styles.info__icon}
+                        src={`${process.env.PUBLIC_URL}/assets/img/icon_point.svg`}
+                        alt="Point icon"
+                      />
+                      <div>
+                        <p className={styles.infoLeft__paragraph}>
+                          <span>{object.street}</span>
+                        </p>
+                        <p className={styles.infoLeft__paragraph}>{object.city}</p>
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <div className={styles.infoRight}>
@@ -435,29 +389,20 @@ const ObjectDetails = ({
                       </div>
                     </div>
                   </div>
-                  {windowWidth < 1070 ? (
-                    <div className={styles.berg}>
-                      <Logo className={styles.berg__logo} />
-                      <p className={styles.berg__content}>
-                        Powered by{' '}
-                        <a
-                          className={styles.berg__link}
-                          href="http://bergregions.pl/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <span>BergRegions</span>
-                        </a>
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={styles.berg}>
-                      <Logo className={styles.berg__logo} />
-                      <p className={styles.berg__content}>
-                        Powered by <span>BergRegions</span>
-                      </p>
-                    </div>
-                  )}
+                  <div className={styles.berg}>
+                    <Logo className={styles.berg__logo} />
+                    <p className={styles.berg__content}>
+                      Powered by{' '}
+                      <a
+                        className={styles.berg__link}
+                        href="http://bergregions.pl/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>BergRegions</span>
+                      </a>
+                    </p>
+                  </div>
                 </>
               )}
             </div>
