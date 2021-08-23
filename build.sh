@@ -9,11 +9,7 @@ SHOULD_DEPLOY_WAR=$(echo $LAST_COMMIT_MESSAGE | grep "Deploy to dev")
 git clean -fd
 npm install --unsafe-perm -verbose
 
-<<<<<<< HEAD
-if [ "$1" = "master" ]
-=======
 if [ "$1" = "main" ]
->>>>>>> main
     then
     	npm run build
         echo "Deploying to PRODUCTION"
