@@ -16,14 +16,12 @@ const ObjectPage = ({ objects, languagePl }) => {
         </div>
       </Route>
       <Route exact path="/object/:id">
-        <div className={styles.objects__boxDetails}>
-          <ObjectDetails
-            languagePl={languagePl}
-            objects={objects}
-            showFullCard={showFullCard}
-            setShowFullCard={setShowFullCard}
-          />
-        </div>
+        <ObjectDetails
+          languagePl={languagePl}
+          objects={objects}
+          showFullCard={showFullCard}
+          setShowFullCard={setShowFullCard}
+        />
       </Route>
     </Switch>
   );

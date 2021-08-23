@@ -5,13 +5,14 @@ span {
 }
 
 .object {
-  position: absolute;
   display: flex;
   flex-direction: column;
   z-index: -1000;
   max-width: 1080px;
   height: 100%;
   overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
 
   &Full {
     @extend .object;
@@ -59,10 +60,6 @@ span {
 
   &__descriptionBox {
     padding: 15px;
-
-    @media screen and (min-width: 950px) {
-      padding: 30px 60px 0 60px;
-    }
   }
 
   &__imageBox {
@@ -80,15 +77,8 @@ span {
     &Full {
       @extend .object__imageBox;
 
-      margin-top: 67px;
       min-height: 200px;
       height: 200px;
-
-      @media screen and (min-width: 950px) {
-        margin-top: 0;
-        min-height: 340px;
-        height: 340px;
-      }
     }
   }
 
@@ -307,10 +297,6 @@ span {
   justify-content: space-around;
   width: 100%;
 
-  @media screen and (min-width: 950px) {
-    width: 50%;
-  }
-
   &__box {
     display: flex;
     align-items: center;
@@ -327,45 +313,11 @@ span {
     font-size: $font-size-m;
     line-height: $line-height-m;
     margin-left: $margin-m;
-
-    @media screen and (min-width: 950px) {
-      font-size: $font-size-l;
-      line-height: $line-height-l;
-    }
   }
 }
 
 .infoRight {
   display: none;
-
-  @media screen and (min-width: 950px) {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    margin-right: $margin-m;
-  }
-
-  &__paragraph {
-    font-weight: $font-semiBold;
-    font-size: $font-size-l;
-    line-height: $line-height-l;
-    margin-top: $margin-s;
-    text-align: center;
-    color: $color-green;
-  }
-
-  &__qr {
-    width: 180px;
-    height: 180px;
-  }
 }
 
 .weather {
