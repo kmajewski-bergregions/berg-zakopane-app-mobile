@@ -22,8 +22,6 @@ const ObjectDetails = ({ languagePl, object, showFullCard, setShowFullCard }) =>
   const { lat } = object.location;
   const { lon } = object.location;
 
-  console.log(lat);
-
   const handlerShowDays = () => {
     setShowDays(!showDays);
   };
